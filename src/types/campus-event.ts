@@ -9,5 +9,20 @@ export interface CampusEvent {
   time: string;
   location: string;
   description: string;
-  image?: string; // İsteğe bağlı (opsiyonel) alan
+  image?: string;
 }
+
+// Adım 7'de eklediğimiz form veri tipi
+export interface EventFormData {
+  title: string;
+  category: Category | "";
+  capacity: string;
+  date: string;
+  time: string;
+  location: string;
+  description: string;
+  image?: string;
+}
+
+// Adım 9 için eklemen gereken hata tipi
+export type EventFormErrors = Partial<Record<keyof EventFormData, string>>;

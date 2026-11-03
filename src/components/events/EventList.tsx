@@ -3,13 +3,11 @@ import EventCard from "./EventCard";
 
 interface EventListProps {
   events: CampusEvent[];
-  onShowDetail: (id: string) => void;
   emptyText?: string;
 }
 
 function EventList({
   events,
-  onShowDetail,
   emptyText = "Henüz etkinlik bulunmuyor.",
 }: EventListProps) {
   if (events.length === 0) {
@@ -22,7 +20,6 @@ function EventList({
         <EventCard
           key={event.id}
           event={event}
-          onShowDetail={onShowDetail}
         />
       ))}
     </div>
