@@ -2,7 +2,7 @@
 
 :root {
     --no: 2416501090;
-    --ton: mod(var(--no), 360);
+    --ton: 10;
     --renk-ana: hsl(var(--ton), 65%, 38%);
     --renk-zemin: hsl(var(--ton), 30%, 97%);
     --font: "Arial", serif;
@@ -876,8 +876,8 @@ main, .container:has(> .events), main.container {
 }
 
 .tablo th {
-  background: var(--renk-ana, #2b6cb0);
-  color: #fff;
+    background-color: var(--renk-ana);
+    color: white;
 }
 
 .islemler {
