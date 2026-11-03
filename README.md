@@ -1,32 +1,36 @@
-# React + TypeScript + Vite
+# Kampüs Etkinlikleri - Sprint 6 ve Vize Teslimi
+## 1. Canlı Yayın (Vercel)
+**Canlı Adres:** [https://utkuburaksevimli-frontend.vercel.app](https://utkuburaksevimli-frontend.vercel.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## 2. Kurulum ve Çalıştırma
 
-Currently, two official plugins are available:
+Projeyi yerel ortamda çalıştırmak için aşağıdaki adımları izleyin:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Bağımlılıkları yükleyin
+npm install
 
-## React Compiler
+# Geliştirme sunucusunu başlatın
+npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Route Listesi
+Uygulamada yer alan tüm rotalar ve açıklamaları:
 
-## Expanding the Oxlint configuration
+/ : Ana Sayfa (Öne çıkan ve yaklaşan etkinlikler)
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+/events : Tüm Etkinlikler (Kategori filtreleme ve dinamik arama)
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+/events/:id : Etkinlik Detay Sayfası
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+/admin : Yönetim Paneli (Etkinlik listesi, silme ve düzenleme yönlendirmesi)
+
+/admin/new : Yeni Etkinlik Ekleme Formu
+
+/admin/:id/edit : Etkinlik Düzenleme Formu
+
+/login : Giriş Sayfası (Form doğrulama ile)
+
+/register : Kayıt Ol Sayfası (Şifre eşleşme kontrolü ile)
+
+/forgot-password : Şifre Sıfırlama Sayfası
+
+* : 404 Sayfa Bulunamadı (Geçersiz URL yakalayıcı)
